@@ -1,0 +1,23 @@
+<Page x:Class="ComputerShop.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="Состав заказа" Width="120" Height="28" Click="BtnItems_Click"/>
+            <Button x:Name="btnCancel" Content="Отменить заказ" Width="120" Height="28" Margin="10,0,0,0" Click="BtnCancel_Click"/>
+            <Button x:Name="btnStatus" Content="Изменить статус" Width="120" Height="28" Margin="10,0,0,0" Click="BtnStatus_Click"/>
+            <Button x:Name="btnDelete" Content="Удалить заказ" Width="120" Height="28" Margin="10,0,0,0" Click="BtnDelete_Click"/>
+        </StackPanel>
+        <ListView x:Name="lvOrders">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер" Width="70" DisplayMemberBinding="{Binding OrderID}"/>
+                    <GridViewColumn Header="Дата" Width="130" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Header="Клиент" Width="180" DisplayMemberBinding="{Binding CustomerName}"/>
+                    <GridViewColumn Header="Статус" Width="110" DisplayMemberBinding="{Binding Status}"/>
+                    <GridViewColumn Header="Сумма" Width="110" DisplayMemberBinding="{Binding Total}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Page>

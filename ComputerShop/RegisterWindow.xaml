@@ -1,0 +1,22 @@
+<Window x:Class="ComputerShop.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация" Height="480" Width="420"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <StackPanel Margin="30">
+        <TextBlock Text="Регистрация нового клиента" FontSize="16" FontWeight="Bold" Margin="0,0,0,15"/>
+        <TextBlock Text="ФИО:"/>
+        <TextBox x:Name="tbFio" Height="28" Margin="0,5,0,10"/>
+        <TextBlock Text="Логин:"/>
+        <TextBox x:Name="tbLogin" Height="28" Margin="0,5,0,10"/>
+        <TextBlock Text="Пароль (не меньше 6 символов):"/>
+        <PasswordBox x:Name="pbPass" Height="28" Margin="0,5,0,10"/>
+        <TextBlock Text="Повтор пароля:"/>
+        <PasswordBox x:Name="pbPass2" Height="28" Margin="0,5,0,10"/>
+        <TextBlock Text="E-mail:"/>
+        <TextBox x:Name="tbEmail" Height="28" Margin="0,5,0,10"/>
+        <TextBlock Text="Телефон:"/>
+        <TextBox x:Name="tbPhone" Height="28" Margin="0,5,0,15"/>
+        <Button Content="Зарегистрироваться" Height="32" Click="BtnRegister_Click"/>
+    </StackPanel>
+</Window>
